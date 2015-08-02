@@ -860,8 +860,13 @@ GMaps.prototype.drawOverlay = function(options) {
 
     if (options.click) {
       panes.overlayMouseTarget.appendChild(overlay.el);
+<<<<<<< HEAD
       google.maps.event.addDomListener(overlay.el, 'click', function(e) {
         options.click.apply(overlay, [overlay, e]);
+=======
+      google.maps.event.addDomListener(overlay.el, 'click', function() {
+        options.click.apply(overlay, [overlay]);
+>>>>>>> a79b37c33bc0573a778ddb48ebc2b9a51928a7f0
       });
     }
 
